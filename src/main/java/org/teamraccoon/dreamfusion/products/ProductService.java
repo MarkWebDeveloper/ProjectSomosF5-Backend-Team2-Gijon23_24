@@ -107,7 +107,7 @@ public class ProductService implements IGenericFullService<Product, ProductDTO>,
     @Override
     public Message delete(@NonNull Long id) throws Exception {
 
-        String deleteImageResponse = productFacade.delete("imageS3", id);
+        String deleteImageResponse = productFacade.delete("image", id);
         String deleteProductResponse = productFacade.delete("product", id);
 
         Message message = new Message();
